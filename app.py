@@ -174,7 +174,7 @@ def render_pour_log_section(active_pour: dict | None) -> None:
     """Always renders from disk (pour_log.json), independent of session/form state,
     so a page refresh or a new visitor never hides previously saved records."""
     st.subheader("5. Pour Log")
-    st.caption("Every saved pour, persisted locally to pour_log.json. Select a row to export its report.")
+    st.caption("Select a row to export its report.")
 
     history = load_pours()
     if not history:
@@ -245,7 +245,7 @@ def main() -> None:
         "number of days."
     )
     st.caption(
-        "Runs fully offline. This tool estimates strength, it does not approve stripping or "
+        "This tool estimates strength, it does not approve stripping or "
         "PT-cable stressing; that decision requires engineer-of-record (EOR) sign-off."
     )
     with st.expander("New to construction terms? Quick definitions"):
